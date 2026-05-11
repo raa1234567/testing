@@ -1,12 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    header{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      background:linear-gradient(135deg,#1e293b,#0f172a);
+    }
+
+    .hero{
+      max-width:700px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:15px;
+    }
+
+    .hero span{
+      color:#38bdf8;
+    }
+
+    .hero p{
+      color:#cbd5e1;
+      margin-bottom:25px;
+      font-size:18px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#38bdf8;
+      color:#0f172a;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:40px;
+      color:#38bdf8;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+    }
+
+    .about-text{
+      color:#cbd5e1;
+      font-size:18px;
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#334155;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .project-card{
+      background:#1e293b;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:scale(1.03);
+    }
+
+    .project-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#020617;
+      color:#94a3b8;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:40px;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    Lorem ipsum dolor sit amet 
-    consectetur adipisicing elit. Doloremque soluta, repudiandae deserunt ipsum animi consequuntur distinctio? Blanditiis nihil magni necessitatibus culpa ipsum dolorum harum, consectetur aut nobis accusamus quod dolore delectus aspernatur voluptas ea eos ratione quo in tempore et veritatis! Voluptatem reiciendis culpa officia incidunt quibusdam minima odio deserunt eos necessitatibus non, iusto quia rerum accusamus soluta repellendus enim sapiente magnam quo itaque dolorem dignissimos. Consequatur quod dolore aliquid. Aliquid consectetur explicabo molestias reiciendis, ipsum provident fuga rerum. Rerum, quaerat adipisci nihil asperiores minus sint ducimus pariatur voluptas dignissimos cum natus tempora, labore, consequuntur id? Porro cum blanditiis fuga.
+
+  <!-- HERO -->
+  <header>
+    <div class="hero">
+      <h1>Hello, I'm <span>Your Name</span></h1>
+      <p>
+        Web Developer • Designer • Freelancer
+      </p>
+
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2 class="title">About Me</h2>
+
+    <div class="about">
+      <img src="https://picsum.photos/500/400" alt="profile">
+
+      <div class="about-text">
+        <p>
+          I am a modern web developer passionate about creating
+          beautiful and responsive websites using HTML and CSS.
+        </p>
+
+        <br>
+
+        <p>
+          I love clean UI design, animations, and building
+          creative digital experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2 class="title">Skills</h2>
+
+    <div class="skills">
+      <div class="card">
+        <h3>HTML5</h3>
+      </div>
+
+      <div class="card">
+        <h3>CSS3</h3>
+      </div>
+
+      <div class="card">
+        <h3>Responsive Design</h3>
+      </div>
+
+      <div class="card">
+        <h3>UI/UX</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <img src="https://picsum.photos/400/300?1">
+
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>Modern responsive portfolio design.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://picsum.photos/400/300?2">
+
+        <div class="project-content">
+          <h3>Landing Page</h3>
+          <p>Creative landing page UI design.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://picsum.photos/400/300?3">
+
+        <div class="project-content">
+          <h3>Dashboard UI</h3>
+          <p>Modern dashboard interface concept.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2 class="title">Contact</h2>
+
+    <div style="text-align:center;">
+      <p>Email: your@email.com</p>
+      <p>Phone: +855 XX XXX XXX</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Your Name | All Rights Reserved
+  </footer>
+
 </body>
 </html>
